@@ -15,6 +15,6 @@ include 'api'
 include 'services:webservice'
 */
 
-rootProject.name = 'ToBeRenamed'
+rootProject.name = 'JPASevenWonders'
 
 includeFlat 'JPACRUDApp'
