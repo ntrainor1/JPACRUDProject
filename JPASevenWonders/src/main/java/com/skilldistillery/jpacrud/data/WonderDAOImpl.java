@@ -42,8 +42,6 @@ public class WonderDAOImpl implements WonderDAO {
 		managedWonder.setWikiUrl(updatingWonder.getWikiUrl());
 		managedWonder.setPicUrl(updatingWonder.getPicUrl());
 		
-		em.persist(managedWonder);
-
 		// RETURN WONDER
 		return managedWonder;
 	}

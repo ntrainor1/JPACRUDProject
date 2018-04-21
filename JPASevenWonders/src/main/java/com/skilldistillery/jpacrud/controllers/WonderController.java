@@ -68,9 +68,18 @@ public class WonderController {
 		mv.setViewName("WEB-INF/views/show.jsp");
 		return mv;
 	}
+	
+	// SET UP UPDATE WONDER PAGE
+	@RequestMapping(path = "update.do", method = RequestMethod.POST)
+	public ModelAndView toUpdate(@RequestParam(name = "wid") int wonderId) {
+		ModelAndView mv = new ModelAndView();
+		mv.setViewName("WEB-INF/views/updateWonder.jsp");
+		mv.addObject("wid", wonderId);
+		return mv;
+	}
 
 	// PERSIST USER UPDATE TO DATABASE
-	@RequestMapping(path = "update.do", method = RequestMethod.POST)
+	@RequestMapping(path = "updating.do", method = RequestMethod.POST)
 	public ModelAndView updateWonder(@RequestParam(name = "wid") int wonderId, Wonder updatingWonder) {
 		ModelAndView mv = new ModelAndView();
 		if (dao.showWonder(wonderId) != null) {

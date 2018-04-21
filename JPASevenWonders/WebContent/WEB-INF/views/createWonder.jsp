@@ -39,7 +39,7 @@
 		<label for="picUrl">Picture Link</label>
 		<input type="text" name="picUrl"> <br>
 		
-		<input type="submit" value="Continue to Page Two">
+		<input type="submit" value="Create Wonder">
 	</form>
 
 	<hr>

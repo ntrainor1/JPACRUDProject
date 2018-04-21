@@ -12,7 +12,7 @@
 
 	<hr>
 	
-	<form action="addInfo.do" method="POST">
+	<form action="updating.do" method="POST">
 		<%-- Fields to construct Wonder entity --%>
 		<label for="name">Name</label>
 		<input type="text" name="name"> <br>
@@ -39,7 +39,9 @@
 		<label for="picUrl">Picture Link</label>
 		<input type="text" name="picUrl"> <br>
 		
-		<input type="submit" value="Continue to Page Two">
+		<input type="hidden" name="wid" value="${wid }">
+		
+		<input type="submit" value="Update Wonder">
 	</form>
 
 	<hr>
