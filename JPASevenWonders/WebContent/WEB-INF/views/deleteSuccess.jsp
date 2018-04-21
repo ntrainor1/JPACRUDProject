@@ -5,19 +5,13 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Wonders of the World</title>
+<title>Delete Success</title>
 </head>
 <body>
-	<h1>Welcome to Wonders of the World!</h1>
-	
-	<br>
-	
-	<h5><a href="layout.do">Create Your Own Wonder</a></h5>
-	
+	<h1>Your delete was successful</h1>
+
 	<hr>
-	
-	<c:forEach var="w" items="${wonderList}">
-		<h5><a href="show.do?wid=${w.id }">${w.name}</a></h5>
-	</c:forEach>
+
+	<a href="index.do">Return Home</a>
 </body>
 </html>
