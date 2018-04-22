@@ -75,6 +75,7 @@ public class WonderController {
 		ModelAndView mv = new ModelAndView();
 		mv.setViewName("WEB-INF/views/updateWonder.jsp");
 		mv.addObject("wid", wonderId);
+		mv.addObject("wonder", dao.showWonder(wonderId));
 		return mv;
 	}
 

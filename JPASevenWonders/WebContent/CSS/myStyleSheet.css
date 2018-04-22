@@ -1,0 +1,24 @@
+body {
+  background-color: rgb(30, 30, 50);
+}
+
+h1 {
+  font-weight: bold;
+  font-size: 3vw;
+  letter-spacing: 2vw;
+  color: rgb(230, 230, 50);
+  text-align: center;
+}
+
+a:hover {
+  font-weight: bold;
+  font-size: 3vw;
+  letter-spacing: 2vw;
+  color: rgb(240, 240, 240);
+  text-decoration: none;
+  text-align: center;
+}
+
+.inline-block {
+   display: inline-block;
+}

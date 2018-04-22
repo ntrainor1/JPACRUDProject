@@ -15,29 +15,29 @@
 	<form action="updating.do" method="POST">
 		<%-- Fields to construct Wonder entity --%>
 		<label for="name">Name</label>
-		<input type="text" name="name"> <br>
+		<input type="text" placeholder="${wonder.name }" name="name" required> <br>
 		
 		<label for="description">Description</label>
-		<input type="text" name="description"> <br>
+		<input type="text" placeholder="${wonder.description }" name="description" required> <br>
 		
 		<label for="constructionDate">Year of Construction</label>
-		<input type="number" name="constructionDate">
+		<input type="number" placeholder="${wonder.constructionDate }" name="constructionDate" required>
 		<select name="era">
 			<option value="BC">BC</option>
 			<option value="AD">AD</option>
 		</select> <br>
 		
 		<label for="latitude">Latitude</label>
-		<input type="number" step="0.000001" name="latitude"> <br>
+		<input type="number" placeholder="${wonder.latitude }" step="0.000001" name="latitude" required> <br>
 		
 		<label for="longitude">Longitude</label>
-		<input type="number" step="0.000001" name="longitude"> <br>
+		<input type="number" placeholder="${wonder.longitude }" step="0.000001" name="longitude" required> <br>
 
 		<label for="wikiUrl">Wikipedia Link</label>
-		<input type="text" name="wikiUrl"> <br>
+		<input type="text" placeholder="${wonder.wikiUrl }" name="wikiUrl" required> <br>
 		
 		<label for="picUrl">Picture Link</label>
-		<input type="text" name="picUrl"> <br>
+		<input type="text" placeholder="${wonder.picUrl }" name="picUrl" required> <br>
 		
 		<input type="hidden" name="wid" value="${wid }">
 		

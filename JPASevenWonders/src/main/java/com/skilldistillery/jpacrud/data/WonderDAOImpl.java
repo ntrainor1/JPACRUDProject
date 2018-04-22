@@ -34,14 +34,15 @@ public class WonderDAOImpl implements WonderDAO {
 		Wonder managedWonder = em.find(Wonder.class, id);
 
 		// UPDATE WONDER FIELDS
-		managedWonder.setName(updatingWonder.getName());
-		managedWonder.setDescription(updatingWonder.getDescription());
-		managedWonder.setConstructionDate(updatingWonder.getConstructionDate());
-		managedWonder.setEra(updatingWonder.getEra());
-		managedWonder.setLatitude(updatingWonder.getLatitude());
-		managedWonder.setWikiUrl(updatingWonder.getWikiUrl());
-		managedWonder.setPicUrl(updatingWonder.getPicUrl());
-		
+			managedWonder.setName(updatingWonder.getName());
+			managedWonder.setDescription(updatingWonder.getDescription());
+			managedWonder.setConstructionDate(updatingWonder.getConstructionDate());
+			managedWonder.setEra(updatingWonder.getEra());
+			managedWonder.setLatitude(updatingWonder.getLatitude());
+			managedWonder.setLongitude(updatingWonder.getLongitude());
+			managedWonder.setWikiUrl(updatingWonder.getWikiUrl());
+			managedWonder.setPicUrl(updatingWonder.getPicUrl());
+
 		// RETURN WONDER
 		return managedWonder;
 	}
@@ -51,7 +52,7 @@ public class WonderDAOImpl implements WonderDAO {
 		boolean deleted = true;
 
 		try {
-			
+
 			// FIND WONDER AND URL INFORMATION WITH NAME
 			Wonder managedWonder = em.find(Wonder.class, id);
 
@@ -59,7 +60,7 @@ public class WonderDAOImpl implements WonderDAO {
 			em.remove(managedWonder);
 
 		} catch (IllegalArgumentException iae) {
-			
+
 			deleted = false;
 
 		}
