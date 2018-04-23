@@ -18,21 +18,27 @@ class WonderTests {
 
 	@BeforeEach
 	public void setUp() throws Exception {
-		emf = Persistence.createEntityManagerFactory("VideoStore");
+		emf = Persistence.createEntityManagerFactory("CrudApp");
 		em = emf.createEntityManager();
-		wonder = em.find(Wonder.class, "P");
+		wonder = em.find(Wonder.class, 1);
 	}
 
 	@Test
 	@DisplayName("Test Wonder entity mapping")
 	void test_wonder_mappings() {
-		assertEquals("ACADEMY DINOSAUR", wonder.getName());
-		assertEquals("A Epic Drama of a Feminist And a Mad Scientist who must Battle a Teacher in The Canadian Rockies", wonder.getDescription());
+		assertEquals("Pyramids of Giza", wonder.getName());
+		assertEquals("The Great Pyramid of Giza (also known as the Pyramid of Khufu or the Pyramid of Cheops) is the oldest and largest of the three pyramids in the Giza pyramid complex bordering what is now El Giza, Egypt.", wonder.getDescription());
+		assertEquals(2580, wonder.getConstructionDate());
+		assertEquals("BC", wonder.getEra().toString());
+		assertEquals(31.1342, wonder.getLatitude());
+		assertEquals(29.9792, wonder.getLongitude());
+		assertEquals("https://en.wikipedia.org/wiki/Giza_pyramid_complex", wonder.getWikiUrl());
+		assertEquals("https://upload.wikimedia.org/wikipedia/commons/e/e3/Kheops-Pyramid.jpg", wonder.getPicUrl());
 	}
 	
 	@Test
-	@DisplayName("Test Wonder entity has rating")
-	void test_film_rating() {
+	@DisplayName("Test Wonder entity has era")
+	void test_wonder_era() {
 		assertEquals(Era.BC, wonder.getEra());
 	}
 	
