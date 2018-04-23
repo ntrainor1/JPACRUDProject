@@ -23,17 +23,17 @@
 		<table>
 		<tr>
 		<td><label for="name">Name</label></td>
-		<td><input type="text" placeholder="${wonder.name }" name="name" required></td>
+		<td><input type="text" value="${wonder.name }" name="name" required></td>
 		</tr>
 		
 		<tr>
 		<td><label for="description">Description</label></td>
-		<td><input type="text" placeholder="${wonder.description }" name="description" required></td>
+		<td><input type="text" value="${wonder.description }" name="description" required></td>
 		</tr>
 		
 		<tr>
 		<td><label for="constructionDate">Year of Construction</label></td>
-		<td><input type="number" placeholder="${wonder.constructionDate }"  min="0" max="5000" name="constructionDate" required>
+		<td><input type="number" value="${wonder.constructionDate }"  min="0" max="5000" name="constructionDate" required>
 		<select name="era">
 			<option value="BC">BC</option>
 			<option value="AD">AD</option>
@@ -42,22 +42,22 @@
 		
 		<tr>
 		<td><label for="latitude">Latitude</label></td>
-		<td><input type="number" placeholder="${wonder.latitude }" step="0.000001" min="-179.999999" max="179.999999" name="latitude" required></td>
+		<td><input type="number" value="${wonder.latitude }" step="0.000001" min="-179.999999" max="179.999999" name="latitude" required></td>
 		</tr>
 		
 		<tr>
 		<td><label for="longitude">Longitude</label></td>
-		<td><input type="number" placeholder="${wonder.longitude }" step="0.000001" min="-179.999999" max="179.999999" name="longitude" required></td>
+		<td><input type="number" value="${wonder.longitude }" step="0.000001" min="-179.999999" max="179.999999" name="longitude" required></td>
 		</tr>
 
 		<tr>
 		<td><label for="wikiUrl">Wikipedia Link</label></td>
-		<td><input type="text" placeholder="${wonder.wikiUrl }" name="wikiUrl" required></td>
+		<td><input type="text" value="${wonder.wikiUrl }" name="wikiUrl" required></td>
 		</tr>
 		
 		<tr>
 		<td><label for="picUrl">Picture Link</label></td>
-		<td><input type="text" placeholder="${wonder.picUrl }" name="picUrl" required></td>
+		<td><input type="text" value="${wonder.picUrl }" name="picUrl" required></td>
 		</tr>
 		</table>
 		

@@ -66,6 +66,10 @@ form {
 }
 
 #wonderImage {
-	height: 400px;
-	width: 400px;
+	height: 40%;
+	width: 60%;
+	display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 25px;
 }

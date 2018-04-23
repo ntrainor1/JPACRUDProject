@@ -66,6 +66,7 @@ public class WonderController {
 	public ModelAndView showWonder(@RequestParam(name = "wid") int wonderId) {
 		ModelAndView mv = new ModelAndView();
 		Wonder wonder = dao.showWonder(wonderId);
+		System.out.println(wonder.getPicUrl());
 		mv.addObject("wonder", wonder);
 		mv.setViewName("WEB-INF/views/show.jsp");
 		return mv;
