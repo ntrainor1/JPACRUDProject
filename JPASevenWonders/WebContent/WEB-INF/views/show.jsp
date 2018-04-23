@@ -12,12 +12,6 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 <link rel="stylesheet" href="CSS/myStyleSheet.css" type="text/css">
 
-<style>
-#map {
-	height: 400px;
-	width: 100%;
-}
-</style>
 </head>
 <body>
 	<table>
@@ -40,15 +34,15 @@
 		</tr>
 	</table>
 	<hr>
-	
-	<img src="${wonder.picUrl} alt="A picture of ${wonder.name }">
 
-	<a href="${url.wikiUrl }"><h1>${wonder.name}</h1></a>
+	<a href="${wonder.wikiUrl }"><h2>${wonder.name}</h2></a>
 
 	<hr>
 
-	<h5>${wonder.description}</h5>
-	<h5>${wonder.constructionDate}${wonder.era}</h5>
+	<h5>Constructed: ${wonder.constructionDate}${wonder.era}</h5>
+	<p>${wonder.description}</p>
+	
+	<a href="${wonder.picUrl} target="_blank"><h2>Picture of ${wonder.name}</h2></a>
 
 	<div id="map">
 		<script>
@@ -69,7 +63,6 @@
 		</script>
 		<script async defer
 			src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC1CKKidcuJxSfbCeNyMW0eWcGmAKaJCnU&callback=initMap">
-			
 		</script>
 </body>
 </html>

@@ -46,6 +46,7 @@ public class WonderController {
 		if (w != null) {
 			mv.setViewName("redirect:wonderAdded.do");
 		} else {
+			mv.addObject("operation", "creation");
 			mv.setViewName("WEB-INF/views/deleteFail.jsp");
 		}
 		return mv;
@@ -55,6 +56,7 @@ public class WonderController {
 	@RequestMapping(path = "wonderAdded.do", method = RequestMethod.GET)
 	public ModelAndView addedWonder() {
 		ModelAndView mv = new ModelAndView();
+		mv.addObject("operation", "creation");
 		mv.setViewName("WEB-INF/views/deleteSuccess.jsp");
 		return mv;
 	}
@@ -87,6 +89,7 @@ public class WonderController {
 			dao.updateWonder(wonderId, updatingWonder);
 			mv.setViewName("redirect:wonderUpdated.do");
 		} else {
+			mv.addObject("operation", "update");
 			mv.setViewName("WEB-INF/views/deleteFail.jsp");
 		}
 		return mv;
@@ -96,6 +99,7 @@ public class WonderController {
 	@RequestMapping(path = "wonderUpdated.do", method = RequestMethod.GET)
 	public ModelAndView updatedWonder() {
 		ModelAndView mv = new ModelAndView();
+		mv.addObject("operation", "update");
 		mv.setViewName("WEB-INF/views/deleteSuccess.jsp");
 		return mv;
 	}
@@ -106,8 +110,10 @@ public class WonderController {
 		ModelAndView mv = new ModelAndView();
 		Boolean delete = dao.destroy(wonderId);
 		if (delete) {
+			mv.addObject("operation", "delete");
 			mv.setViewName("WEB-INF/views/deleteSuccess.jsp");
 		} else {
+			mv.addObject("operation", "delete");
 			mv.setViewName("WEB-INF/views/deleteFail.jsp");
 		}
 		return mv;

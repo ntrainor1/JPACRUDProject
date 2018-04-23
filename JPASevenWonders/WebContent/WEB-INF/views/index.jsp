@@ -15,15 +15,17 @@
 </head>
 <body>
 	<h1>Welcome to Wonders of the World!</h1>
-	
-	<br>
-	
-	<h5><a href="layout.do">Create Your Own Wonder</a></h5>
+	<h4>Click below to learn more about these wonders!</h4>
 	
 	<hr>
 	
 	<c:forEach var="w" items="${wonderList}">
-		<h1><a href="show.do?wid=${w.id }">${w.name}</a></h1>
+		<h3><a href="show.do?wid=${w.id }" id="wonderLink">${w.name}</a></h3>
+		<br>
 	</c:forEach>
+	
+	<form action="layout.do" method="GET">
+		<input type="submit" value="Create Your Own Wonder">
+	</form>
 </body>
 </html>
